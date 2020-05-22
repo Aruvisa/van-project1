@@ -5,7 +5,8 @@ class App2 extends Component {
         super(props);
         this.state = {  
             username : '',
-            age: null,
+            age: '',
+            pekerjaan:'',
         };
     }
 
@@ -18,7 +19,7 @@ class App2 extends Component {
     render() { 
         return ( 
             <form>
-                <h1>Halo Nama ku adalah {this.state.username} dan umur ku adalah {this.state.age}</h1>
+                <h1>Halo Nama ku adalah {this.state.username} dan umur ku adalah {this.state.age} dan pekerjaan ku adalah {this.state.pekerjaan}</h1>
                 <p>Siapa nama mu ?</p>
                 <input 
                     type='text'
@@ -29,6 +30,12 @@ class App2 extends Component {
                 <input 
                     type='number'
                     name='age'
+                    onChange={this.myChangeHandler}
+                />
+                <p>Apa pekerjaan mu ?</p>
+                <input 
+                    type='text'
+                    name='pekerjaan'
                     onChange={this.myChangeHandler}
                 />
             </form>
